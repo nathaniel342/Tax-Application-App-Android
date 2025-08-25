@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">exam2_413</string>
+    <string name="username">Nathaniel Ankomah</string>
+    <string name="app_title">The Tax App</string>
+    <string name="income_hint">Enter Gross Income</string>
+    <string name="calculate_text">Generate Tax Amount</string>
+    <string name="new_zealand">New Zealand</string>
+    <string name="sweden">Sweden</string>
+    <string name="germany">Germany</string>
+    <string name="Results_text">Taxes to be paid:</string>
+</resources>

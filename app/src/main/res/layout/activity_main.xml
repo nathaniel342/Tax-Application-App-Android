@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/outline_arrow_back_24"
+        app:title="@string/app_title"
+        app:titleTextColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="82dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/iconsavatar" />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:textSize="26sp"
+        android:text="@string/username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgAvatar" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/incomelayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:startIconDrawable="@drawable/outline_document_search_24"
+        app:layout_constraintTop_toBottomOf="@+id/tvUsername"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+    >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputTextIncome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="@string/income_hint" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/incomelayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioGroup
+            android:id="@+id/rgCountries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbGermany"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/germany" />
+
+            <RadioButton
+                android:id="@+id/rbSweden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sweden" />
+
+            <RadioButton
+                android:id="@+id/rbNewZealand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_zealand" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/calculate_text"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="32dp" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="375dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:fontFamily="@font/audiowide"
+            android:text="@string/Results_text"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/background"
+            />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
